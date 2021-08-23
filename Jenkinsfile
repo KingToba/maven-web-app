@@ -4,7 +4,7 @@ def mavenHome = tool name: "maven3.6.3"
     
     stage("1. git clone")
     {
-       git url: 'https://github.com/LandmakTechnology/maven-web-app.git'
+       git url: 'https://github.com/Kenmakhanu/maven-web-app.git'
     }
     
     stage("2. Build")
@@ -15,11 +15,11 @@ def mavenHome = tool name: "maven3.6.3"
     }
     stage('3. Sonar')
     {
-         //sh "${mavenHome}/bin/mvn sonar:sonar"
+         sh "${mavenHome}/bin/mvn sonar:sonar"
     }
     stage('4. Nexus')
      {
-         //sh "${mavenHome}/bin/mvn deploy"
+         sh "${mavenHome}/bin/mvn deploy"
     }
     stage('5. Deploy')
     {
