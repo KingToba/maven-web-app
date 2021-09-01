@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Landmark Technology - Leaders in Software Delivery</h1>
-<h1 align="center"> Welcome to Landmark Technology...USA Campus....Where Jesus is Lord and Devops happen</h1>
+<h1 align="center"> Welcome to Landmark Technology in the USA Campus....Where Jesus is Lord and Devops happen</h1>
 	<h1 align="center" >JESUS IS LORD</h1>
 <hr>
 <div style="text-align: center;">
