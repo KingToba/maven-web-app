@@ -21,9 +21,9 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 	
-		<sonar.host.url>http://54.189.134.165:9000/</sonar.host.url>
+		<sonar.host.url>http://18.236.174.78:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>admin123</sonar.password>
+		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Releases Nexus Repository</name>
-	      <url>http://54.148.32.73:8081/repository/releases//</url>
+	      <url>http://54.184.72.115:8081/repository/kenmak//</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Snapshot Nexus Repository </name>
-	      <url>http://54.148.32.73:8081/repository/snapshots//</url>
+	      <url>http://http://54.184.72.115:8081/repository/kenmak//</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
