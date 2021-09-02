@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test Application') {
             steps {
-                sh 'mvn sonar:sonar'
+               // sh 'mvn sonar:sonar'
             }
         }
         stage('Deploy in Staging Environment'){
