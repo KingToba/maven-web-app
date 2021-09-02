@@ -14,7 +14,6 @@ pipeline {
         }
         stage('Test Application') {
             steps {
-               // sh 'mvn sonar:sonar'
                 echo "Test OK"
             }
         }
