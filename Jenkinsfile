@@ -29,7 +29,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
-                build job: 'Prod_Env'
+                build job: 'Jenkins_Nexus'
             }
         }
     }
