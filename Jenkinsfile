@@ -17,6 +17,11 @@ pipeline {
                 sh 'mvn sonar:sonar'
             }
         }
+         stage('Nexus Archieve') {
+            steps {
+                sh 'mvn deploy'
+            }
+        }
         stage('Deploy to Tomcat_Staging'){
             steps{
                 build job: 'Staging_Env'
