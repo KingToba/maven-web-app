@@ -21,7 +21,8 @@ pipeline {
             steps {
                 sh 'mvn deploy'
                 nexusArtifactUploader credentialsId: 'nexus-user-credentials', groupId: 'web-app', nexusUrl: 'http://54.189.189.148:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven-build-repo', version: '1.0.1', artifacts: [
-                 [artifactId: pom.artifactId, classifier: '', file: artifactPath, type: pom.packaging],[artifactId: pom.artifactId, classifier: '', file: "pom.xml", type: "pom"]
+                 [artifactId: pom.artifactId, classifier: '', file: artifactPath, type: pom.packaging], [artifactId: pom.artifactId, classifier: '', file: "pom.xml", type: "pom"]
+              ]
             }
         }
         stage('Deploy to Tomcat_Staging'){
