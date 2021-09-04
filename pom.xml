@@ -21,7 +21,7 @@
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
 	
-		<sonar.host.url>http://18.236.174.78:9000/</sonar.host.url>
+		<sonar.host.url>http://18.236.179.53:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Releases Nexus Repository</name>
-	      <url>http://54.184.72.115:8081/repository/maven-build//</url>
+	      <url>http://54.189.189.148:8081/repository/maven-build//</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Snapshot Nexus Repository </name>
-	      <url>http://http://54.184.72.115:8081/repository/maven-build//</url>
+	      <url>http://http://54.189.189.148:8081/repository/maven-build//</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
