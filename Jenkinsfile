@@ -20,7 +20,7 @@ pipeline {
          stage('Nexus Archieve') {
             steps {
                 script{
-                 def mavenPom = readMavenPom 'pom.xml'
+                 def mavenPom = readMavenPom file:'pom.xml'
                  nexusArtifactUploader artifacts: [
                     [
                         artifactId: 'maven-web-application', 
