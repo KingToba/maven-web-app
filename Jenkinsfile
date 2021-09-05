@@ -19,8 +19,9 @@ pipeline {
         }
          stage('Nexus Archieve') {
             steps {
-                def mavenPom = readMavenPom 'pom.xml'
-                nexusArtifactUploader artifacts: [
+                script{
+                 def mavenPom = readMavenPom 'pom.xml'
+                 nexusArtifactUploader artifacts: [
                     [
                         artifactId: 'maven-web-application', 
                         classifier: '', 
@@ -35,6 +36,7 @@ pipeline {
                 protocol: 'http', 
                 repository: 'maven-build-repo',
                 version: "${mavenPom.version}"
+               }
             }
         }
         stage('Deploy to Tomcat_Staging'){
