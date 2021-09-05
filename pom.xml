@@ -110,7 +110,9 @@
 	</distributionManagement>
 	
 	<build>
+	      <!--
 		<finalName>Kensapps</finalName>
+                -->
 		
 		<plugins>
 			<plugin>
