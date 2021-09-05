@@ -24,7 +24,7 @@ pipeline {
                     [
                         artifactId: 'maven-web-application', 
                         classifier: '', 
-                        file: 'target/maven-web-application-0.0.1.war',
+                        file: 'target/Kensapps.war',
                         type: 'war'
                     ]
                 ],
