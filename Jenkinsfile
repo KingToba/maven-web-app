@@ -30,8 +30,8 @@ pipeline {
                 ],
                 credentialsId: 'nexus-user-credentials',
                 groupId: 'com.mt',
-                nexusUrl: 'http://54.189.189.148:8081/',
-                nexusVersion: 'nexus2',
+                nexusUrl: '54.189.189.148:8081',
+                nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: 'maven-build-repo',
                 version: '0.0.1'
