@@ -19,12 +19,12 @@ pipeline {
         }
          stage('Nexus Archieve') {
             steps {
-                //sh 'mvn deploy'
+                def mavenPom = readMavenPom 'pom.xml'
                 nexusArtifactUploader artifacts: [
                     [
                         artifactId: 'maven-web-application', 
                         classifier: '', 
-                        file: 'target/Kensapps.war',
+                        file: "target/Kensapps-${mavenPom.version}.war",
                         type: 'war'
                     ]
                 ],
@@ -34,7 +34,7 @@ pipeline {
                 nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: 'maven-build-repo',
-                version: '0.0.1'
+                version: "${mavenPom.version}"
             }
         }
         stage('Deploy to Tomcat_Staging'){
