@@ -55,13 +55,13 @@ pipeline {
                 build job: 'Prod_Env'
             }
         }
-        stage('Archieve artifacts in Nexus'){
-            steps{
-                timeout(time:5, unit:'DAYS'){
-                    input message:'Approve artifact archiving?'
-                }
-                build job: 'Jenkins_Nexus'
-            }
-        }
+        //stage('Archieve artifacts in Nexus'){
+           // steps{
+              //  timeout(time:5, unit:'DAYS'){
+                //    input message:'Approve artifact archiving?'
+             //   }
+              //  build job: 'Jenkins_Nexus'
+          //  }
+       // }
     }
 }
