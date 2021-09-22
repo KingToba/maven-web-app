@@ -30,7 +30,7 @@ pipeline {
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'Kenmak',
+                credentialsId: 'nexus-credentials',
                 groupId: 'com.mt',
                 nexusUrl: '52.33.179.211:8081',
                 nexusVersion: 'nexus3',
