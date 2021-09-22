@@ -12,11 +12,11 @@ pipeline {
                 }
             }
         }
-       // stage('SonarQube Test') {
-         //   steps {
-           //     sh 'mvn sonar:sonar'
-            //}
-        //}
+        stage('SonarQube Test') {
+            steps {
+                sh 'mvn sonar:sonar'
+            }
+        }
          stage('Nexus Archieve') {
             steps {
                 script{
