@@ -12,16 +12,16 @@ pipeline {
                 }
             }
         }
-        stage('SonarQube Test') {
-            steps {
-                sh 'mvn sonar:sonar'
-            }
-        }
+       // stage('SonarQube Test') {
+         //   steps {
+           //     sh 'mvn sonar:sonar'
+            //}
+        //}
          stage('Nexus Archieve') {
             steps {
                 script{
                  def mavenPom = readMavenPom file:'pom.xml'
-                 def nexusRepoName = mavenPom.version.endsWith("SNAPSHOT") ? "maven-build-snapshot" : "maven-build-release"
+                 def nexusRepoName = mavenPom.version.endsWith("SNAPSHOT") ? "Kens-repo-snapshot" : "kens-repo-release"
                  nexusArtifactUploader artifacts: [
                     [
                         artifactId: 'maven-web-application', 
@@ -30,9 +30,9 @@ pipeline {
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'nexus-user-credentials',
+                credentialsId: 'nexus credentials',
                 groupId: 'com.mt',
-                nexusUrl: '54.189.189.148:8081',
+                nexusUrl: '52.33.179.211:8081',
                 nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: nexusRepoName,
