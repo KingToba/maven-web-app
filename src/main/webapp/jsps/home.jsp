@@ -11,7 +11,7 @@
 <body>
 <h1 align="center">Landmark Technology </h1>
 <h1 align="center"> Welcome to Landmark Technology Where Jesus is Lord! And learn Devops!</h1>
-	<h1 align="center" >JESUS IS LORD! AND HE IS COMING AGAIN!</h1>
+	<h1 align="center" >JESUS!</h1>
 <hr>
 <div style="text-align: center;">
 	<span>
