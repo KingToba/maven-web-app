@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Landmark Technology </h1>
-<h1 align="center"> Welcome to Landmark!</h1>
+<h1 align="center"> Welcome to Landmark Technologies!</h1>
 	<h1 align="center" >JESUS!</h1>
 <hr>
 <div style="text-align: center;">
