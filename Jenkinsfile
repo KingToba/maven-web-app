@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Git clone') {
+            steps {
+                script {
+                    git 'https://github.com/Kenmakhanu/maven-web-app.git';
+                }
+            }
+        }
         stage('Maven Build') {
             steps {
                 sh 'mvn clean package'
