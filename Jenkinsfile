@@ -70,5 +70,5 @@ pipeline {
               //  build job: 'Jenkins_Nexus'
           //  }
        // }
-    //}
+    }
 }
