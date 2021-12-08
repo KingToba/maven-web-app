@@ -24,7 +24,7 @@ pipeline {
         }
         stage('SonarQube Test') {
             steps {
-                sh 'mvn sonar:sonar'
+                sh 'mvn -e sonar:sonar'
                 //echo 'sonarqube testing'
             }
         }
