@@ -24,7 +24,7 @@ pipeline {
         }
         stage('SonarQube Test') {
             steps {
-                sh 'mvn -e sonar:sonar'
+                sh 'mvn sonar:sonar'
                 //echo 'sonarqube testing'
             }
         }
@@ -43,7 +43,7 @@ pipeline {
                 ],
                 credentialsId: 'nexus-user-credentials',
                 groupId: 'com.mt',
-                nexusUrl: '50.18.77.160:8081',
+                nexusUrl: '54.219.128.33:8081',
                 nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: nexusRepoName,
