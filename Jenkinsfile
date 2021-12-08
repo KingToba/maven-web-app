@@ -15,17 +15,16 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-           // post {
-              //  success {
-                //    echo "Now Archiving the Artifacts...."
-                 //   archiveArtifacts artifacts: '**/*.war'
-               // }
-           // }
+            post {
+                success {
+                    echo "Now Archiving the Artifacts...."
+                    archiveArtifacts artifacts: '**/*.war'
+                }
+            }
         }
         stage('SonarQube Test') {
             steps {
                 sh 'mvn sonar:sonar'
-                //echo 'sonarqube testing'
             }
         }
          stage('Nexus Archieve') {
