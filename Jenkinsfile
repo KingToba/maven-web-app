@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven "jenkins-maven"
+    }
     stages {
         stage('Git clone') {
             steps {
@@ -21,7 +24,8 @@ pipeline {
         }
         stage('SonarQube Test') {
             steps {
-                sh 'mvn sonar:sonar'
+                //sh 'mvn sonar:sonar'
+                echo 'sonarqube testing'
             }
         }
          stage('Nexus Archieve') {
@@ -37,9 +41,9 @@ pipeline {
                         type: 'war'
                     ]
                 ],
-                credentialsId: 'nexus-credentials',
+                credentialsId: 'nexus-user-credentials',
                 groupId: 'com.mt',
-                nexusUrl: '13.56.193.42:8081',
+                nexusUrl: '50.18.77.160:8081',
                 nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: nexusRepoName,
