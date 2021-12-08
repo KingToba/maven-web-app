@@ -24,8 +24,8 @@ pipeline {
         }
         stage('SonarQube Test') {
             steps {
-                //sh 'mvn sonar:sonar'
-                echo 'sonarqube testing'
+                sh 'mvn sonar:sonar'
+                //echo 'sonarqube testing'
             }
         }
          stage('Nexus Archieve') {
