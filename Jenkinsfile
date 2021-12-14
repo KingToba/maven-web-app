@@ -42,7 +42,7 @@ pipeline {
                 ],
                 credentialsId: 'nexus-user-credentials',
                 groupId: 'com.mt',
-                nexusUrl: '54.219.128.33:8081',
+                nexusUrl: '50.18.33.101:8081',
                 nexusVersion: 'nexus3',
                 protocol: 'http', 
                 repository: nexusRepoName,
